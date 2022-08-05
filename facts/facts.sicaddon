@@ -1,0 +1,11 @@
+def getvar(text):
+    if "<<<fact>>>" in text:
+        if True:
+            import random
+            import os
+        
+            import requests
+            g = requests.get("https://raw.githubusercontent.com/compactcoding-sa/sic-addons/main/facts/facts.txt").text
+            return text.replace("<<<fact>>>",random.choice(g.split("\n")))
+    else:
+        return text
